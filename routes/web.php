@@ -17,3 +17,5 @@ Route::get('/prospect', function(){
 })->name('prospect');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 Route::post('/verify-access', [ProjectController::class, 'verify'])->name('verify.access')->middleware([ProtectAgainstSpam::class, 'throttle:3,1']);
+Route::post('/lang', [HomeController::class, 'change'])
+    ->name('change-language');

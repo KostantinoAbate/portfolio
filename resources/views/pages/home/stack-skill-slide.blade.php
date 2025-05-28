@@ -34,8 +34,8 @@
                         <h4 class="text-xl font-bold">PHP</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
                             <li class="mb-2">OOP</li>
-                            <li class="mb-2">Sicurezza</li>
-                            <li class="mb-2">Ottimizzazione</li>
+                            <li class="mb-2">{{ __('atom.security') }}</li>
+                            <li class="mb-2">{{ __('atom.optimization') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
@@ -44,7 +44,7 @@
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
                             <li class="mb-2">MVC</li>
                             <li class="mb-2">Eloquent ORM</li>
-                            <li class="mb-2">Scalabilità</li>
+                            <li class="mb-2">{{ __('atom.scalability') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
@@ -61,8 +61,8 @@
                         <h4 class="text-xl font-bold">MySQL</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
                             <li class="mb-2">CRUD</li>
-                            <li class="mb-2">Relazioni</li>
-                            <li class="mb-2">Indicizzazione</li>
+                            <li class="mb-2">{{ __('atom.relations') }}</li>
+                            <li class="mb-2">{{ __('atom.indexing') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
                             <li class="mb-2">DOM</li>
                             <li class="mb-2">API</li>
-                            <li class="mb-2">Automazione</li>
+                            <li class="mb-2">{{ __('atom.automation') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
@@ -93,16 +93,16 @@
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
                             <li class="mb-2">Utility</li>
                             <li class="mb-2">Responsive</li>
-                            <li class="mb-2">Efficienza</li>
+                            <li class="mb-2">{{ __('atom.efficiency') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
                         <img src="{{ asset('assets/stack/sass.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">Sass</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Pulizia</li>
+                            <li class="mb-2">{{ __('atom.cleanliness') }}</li>
                             <li class="mb-2">Nesting</li>
-                            <li class="mb-2">Riusabilità</li>
+                            <li class="mb-2">{{ __('atom.reusability') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -113,9 +113,9 @@
                         <img src="{{ asset('assets/stack/html.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">HTML</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Ottimizzazione semantica</li>
+                            <li class="mb-2">{{ __('atom.semantic') }}</li>
                             <li class="mb-2">SEO onsite</li>
-                            <li class="mb-2">Accessibilità</li>
+                            <li class="mb-2">{{ __('atom.accessibility') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
@@ -124,16 +124,16 @@
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
                             <li class="mb-2">Responsive</li>
                             <li class="mb-2">Layout Building</li>
-                            <li class="mb-2">Ottimizzazione</li>
+                            <li class="mb-2">{{ __('atom.optimization') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
                         <img src="{{ asset('assets/stack/markdown.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">Markdown</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Documentazioni</li>
-                            <li class="mb-2">Sintesi</li>
-                            <li class="mb-2">Gestione contenuti</li>
+                            <li class="mb-2">{{ __('atom.doc') }}</li>
+                            <li class="mb-2">{{ __('atom.sintex') }}</li>
+                            <li class="mb-2">{{ __('atom.content') }}</li>
                         </ul>
                     </div>
                 </div>
@@ -144,45 +144,45 @@
                         <img src="{{ asset('assets/stack/db.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">DB Design</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Normalizzazione</li>
-                            <li class="mb-2">Relazioni</li>
-                            <li class="mb-2">Diagrammi ER</li>
+                            <li class="mb-2">{{ __('atom.normalization') }}</li>
+                            <li class="mb-2">{{ __('atom.relations') }}</li>
+                            <li class="mb-2">{{ __('atom.diagram') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
                         <img src="{{ asset('assets/stack/software.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">Software Design</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Principi SOLID</li>
-                            <li class="mb-2">Pattern architetturali</li>
-                            <li class="mb-2">Documentazione e UML</li>
+                            <li class="mb-2">{{ __('atom.solid') }}</li>
+                            <li class="mb-2">{{ __('atom.pattern') }}</li>
+                            <li class="mb-2">{{ __('atom.uml') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
                         <img src="{{ asset('assets/stack/photoshop.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">Photoshop</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Progettazione componenti</li>
-                            <li class="mb-2">Creazione prototipi</li>
-                            <li class="mb-2">Esportazione per Web</li>
+                            <li class="mb-2">{{ __('atom.component') }}</li>
+                            <li class="mb-2">{{ __('atom.prototype') }}</li>
+                            <li class="mb-2">{{ __('atom.export') }}</li>
                         </ul>
                     </div>
                     <div class="flex flex-col justify-center items-center gap-4 group">
                         <img src="{{ asset('assets/stack/illustrator.png') }}" class="rounded-2xl opacity-80 hover:opacity-100 hover:-translate-y-2 transition-all">
                         <h4 class="text-xl font-bold">Illustrator</h4>
                         <ul class="list-inside list-disc marker:text-teal-500 text-sm">
-                            <li class="mb-2">Progettazione componenti</li>
-                            <li class="mb-2">Vettorializzazione</li>
-                            <li class="mb-2">Esportazione per Web</li>
+                            <li class="mb-2">{{ __('atom.component') }}</li>
+                            <li class="mb-2">{{ __('atom.vector') }}</li>
+                            <li class="mb-2">{{ __('atom.export') }}</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="divider" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">Scopri di più</div>
+        <div class="divider" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="1000">{{ __('atom.more') }}</div>
         <div class="w-full flex flex-row justify-center items-center gap-2">
-            <a href="{{ route('prospect') }}" class="btn btn-secondary text-sm" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000"><span class="icon-[eos-icons--machine-learning-outlined] size-5"></span>Prospetto</a>
-            <a href="#projects" class="btn btn-secondary btn-outline text-sm" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="1000"><span class="icon-[tabler--folder] size-5"></span>Progetti</a>
+            <a href="{{ route('prospect') }}" class="btn btn-secondary text-sm" data-aos="fade-up" data-aos-delay="1400" data-aos-duration="1000"><span class="icon-[eos-icons--machine-learning-outlined] size-5"></span>{{ __('atom.prospect') }}</a>
+            <a href="#projects" class="btn btn-secondary btn-outline text-sm" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="1000"><span class="icon-[tabler--folder] size-5"></span>{{ __('atom.project') }}</a>
         </div>
     </div>
 </div>

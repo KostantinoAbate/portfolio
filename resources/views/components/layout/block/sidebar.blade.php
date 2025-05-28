@@ -9,9 +9,3 @@
         <span class="icon-[tabler--mail] size-8"></span>
     </a>
 </div>
-@if(!Route::is('home'))
-    <a href="{{ route('home') }}" class="fixed left-4 top-4 z-[9999] text-secondary/40 hover:text-secondary transition-colors flex items-center" data-aos="fade-right">
-        <span class="icon-[tabler--arrow-left] size-8"></span>
-        <span>Torna alla Home</span>
-    </a>
-@endif

@@ -26,12 +26,11 @@
         </div>
         <div class="divider my-4" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000"></div>
         <p class="max-md:text-center" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
-            Mi chiamo Kostantino Abate e sono uno sviluppatore <span class="text-transparent bg-clip-text font-bold bg-gradient-to-r from-secondary to-accent">Full-stack</span> con una forte passione per il design funzionale e il codice pulito.
-            Mi occupo di Software e Web development, creando soluzioni moderne e scalabili per aziende e progetti indipendenti.
+            {!! __('complex.landing-slide.text') !!}
         </p>
         <div class="flex flex-row justify-center items-center gap-2 mt-4">
-            <a href="{{ route('download.cv') }}" class="btn btn-secondary text-sm" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"><span class="icon-[tabler--file-download] size-5"></span>Scarica il CV</a>
-            <a href="#projects" class="btn btn-outline btn-secondary text-sm" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000"><span class="icon-[tabler--folder] size-5"></span>Progetti</a>
+            <a href="{{ route('download.cv') }}" class="btn btn-secondary text-sm" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"><span class="icon-[tabler--file-download] size-5"></span>{{ __('atom.cv') }}</a>
+            <a href="#projects" class="btn btn-outline btn-secondary text-sm" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000"><span class="icon-[tabler--folder] size-5"></span>{{ __('atom.project') }}</a>
         </div>
     </div>
     <div class="w-96 h-96 max-lg:w-[90%] max-lg:h-auto max-lg:aspect-square relative group" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">

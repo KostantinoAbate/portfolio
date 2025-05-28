@@ -5,16 +5,16 @@ namespace App\View\Components\Layout;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Illuminate\Support\Facades\File;
 
 class App extends Component
 {
+    public $locale;
     /**
      * Create a new component instance.
      */
     public function __construct()
     {
-
+        $this->locale = app()->currentLocale();
     }
 
     /**

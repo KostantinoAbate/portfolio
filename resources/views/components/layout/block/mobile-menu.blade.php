@@ -3,10 +3,10 @@
         <a href="#home" class="link link-animated text-secondary/70 hover:text-secondary text-xl">Home</a>
         <a href="#about" class="link link-animated text-base-content/70 hover:text-base-content text-xl">About</a>
         <a href="#stack-skill" class="link link-animated text-base-content/70 hover:text-base-content text-xl">Stack & Skill</a>
-        <a href="#projects" class="link link-animated text-base-content/70 hover:text-base-content text-xl">Progetti</a>
+        <a href="#projects" class="link link-animated text-base-content/70 hover:text-base-content text-xl">{{ __('atom.project') }}</a>
         <a href="#references" class="link link-animated text-base-content/70 hover:text-base-content text-xl">Referral</a>
-        <a href="#contacts" class="link link-animated text-base-content/70 hover:text-base-content text-xl">Contatti</a>
+        <a href="#contacts" class="link link-animated text-base-content/70 hover:text-base-content text-xl">{{ __('atom.contact') }}</a>
     @else
-        <a href="{{ route('home') }}" class="link link-animated text-base-content/70 hover:text-secondary text-xl">Torna alla Home</a>
+        <a href="{{ route('home') }}" class="link link-animated text-base-content/70 hover:text-secondary text-xl">{{ __('atom.backHome') }}</a>
     @endif
 </div>

@@ -6,8 +6,7 @@
                 <span class="text-base-content/70 text-sm uppercase font-semibold">Full-stack developer</span>
             </div>
             <p class="text-base-content text-sm">
-                Mi occupo di Software e Web development, creando soluzioni<br> 
-                moderne e scalabili per aziende e progetti indipendenti.
+                {!! __('complex.footer') !!}
             </p>
             <div class="flex felx-row justify-center items-center gap-2">
                 <a href="{{ route('download.cv') }}" class="btn btn-sm btn-secondary text-sm"><span class="icon-[tabler--file-download] size-5"></span>Scarica il CV</a>
@@ -19,8 +18,8 @@
                 <h6 class="footer-title text-xl">Info</h6>
                 <div class="divider mb-2"></div>
                 <a href="{{ route('bio') }}" class="link link-hover">Bio</a>
-                <a href="{{ route('prospect') }}" class="link link-hover mt-1">Prospetto</a>
-                <a href="{{ route('projects') }}" class="link link-hover mt-1">Progetti</a>
+                <a href="{{ route('prospect') }}" class="link link-hover mt-1">{{ __('atom.prospect') }}</a>
+                <a href="{{ route('projects') }}" class="link link-hover mt-1">{{ __('atom.project') }}</a>
                 <a href="{{ route('download.cv') }}" class="link link-hover mt-1">Curriculum Vitae</a>
             </nav>
             <nav class="text-base-content flex flex-col justify-start items-start text-sm">
@@ -28,7 +27,7 @@
                 <div class="divider mb-2"></div>
                 <a href="https://github.com/KostantinoAbate" target="_blank" class="link link-hover">GitHub</a>
                 <a href="https://www.linkedin.com/in/kostantino-abate-a3b490315/" target="_blank" class="link link-hover mt-1">Linkedin</a>
-                <a href="mailto:kostantinoabate.dev@gmail.com" class="link link-hover mt-1">Contattami</a>
+                <a href="mailto:kostantinoabate.dev@gmail.com" class="link link-hover mt-1">{{ __('atom.contactMe') }}</a>
             </nav>
         </div>
     </footer>
