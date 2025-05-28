@@ -82,6 +82,7 @@ return [
     'projects-page' => [
         'text-1' => '<p>Before I show you the projects, please verify. Type <code class="bg-base-300 p-0.5 px-1 select-none">',
         'text-2' => '</code> into the input field below</p>',
+        'text-3' => '<p data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">You can filter the list using the search input.</p>'
     ],
     'prospect-page' => [
         'text' => 'I could throw a <span class="ka-highlight">wall of text</span> listing all my skills, fields, and technologies I’ve worked with. But as a developer, I couldn’t resist finding a smarter solution!

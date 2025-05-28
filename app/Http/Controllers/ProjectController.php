@@ -18,6 +18,6 @@ class ProjectController extends Controller
     }
     public function index() {
         $projects = config('init.projects');
-        return view('pages.projects', $projects);
+        return view('pages.projects', compact('projects'));
     }
 }

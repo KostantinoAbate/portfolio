@@ -21,4 +21,4 @@
         </a>
     @endif
 </div>
-<form class="hidden" action="{{ route('change-language') }}" method="POST" id="change-language">@csrf<input type="hidden" id="input-lang" name="locale" value="it"></form>
+<form class="hidden" action="{{ route('change-language') }}" method="POST" id="change-language"> @csrf <input type="hidden" id="input-lang" name="locale" value="it"> </form>

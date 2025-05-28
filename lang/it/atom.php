@@ -11,6 +11,7 @@ return [
     'referral' => 'Dicono di me...',
     'collab' => 'Collaborazioni',
     'search' => 'Cerca una competenza, una tecnologia o una skill',
+    'searchProject' => 'Cerca',
     'backHome' => 'Torna alla Home',
     'verify' => 'Verifica',
     'security' => 'Sicurezza',

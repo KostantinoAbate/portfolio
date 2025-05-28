@@ -86,6 +86,7 @@ return [
     'projects-page' => [
         'text-1' => '<p>Prima di mostrarti i progetti esegui la verifica. Scrivi <code class="bg-base-300 p-0.5 px-1 select-none">',
         'text-2' => '</code> nell\'input qui sotto</p>',
+        'text-3' => '<p data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">Puoi filtrare nella lista con l\'input di ricerca.</p>'
     ],
     'prospect-page' => [
         'text' => 'Potrei fare un <span class="ka-highlight">wall of text</span> di competenze, ambiti, tecnologie con cui ho lavorato. Ma essendo uno sviluppatore non potevo

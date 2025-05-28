@@ -11,6 +11,7 @@ return [
     'referral' => 'What they say about me...',
     'collab' => 'Collaborations',
     'search' => 'Search for a skill, technology or competence',
+    'searchProject' => 'Search',
     'backHome' => 'Back to Home',
     'verify' => 'Verify',
     'security' => 'Security',

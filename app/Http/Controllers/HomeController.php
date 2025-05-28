@@ -26,8 +26,8 @@ class HomeController extends Controller
     public function change(Request $request)
     {
         if (in_array($request->input('locale'), ['en', 'it'])) {
-        Session::put('session_locale', $request->input('locale'));
-    }
-    return redirect()->back();
+            Session::put('session_locale', $request->input('locale'));
+        }
+        return redirect()->back();
     }
 }

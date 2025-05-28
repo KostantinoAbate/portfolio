@@ -7,16 +7,73 @@
         }
     @endphp
     <div class="w-full min-h-screen max-lg:h-fit max-lg:max-h-fit" id="prospect">
-        <div class="w-full min-h-screen flex flex-col justify-center items-center gap-4 relative overflow-hidden">
+        <div class="w-full min-h-screen flex flex-col justify-start items-center gap-4 relative overflow-hidden">
             <x-graphic.grid/>
             <div class="absolute left-0 top-0 bottom-0 aspect-square bg-radial from-accent/10 via-accent/0 to-accent/0 scale-120 pointer-events-none"></div>
             <div class="absolute right-0 top-0 bottom-0 aspect-square bg-radial from-secondary/10 via-secondary/0 to-secondary/0 scale-120 pointer-events-none"></div>
             <div class="absolute left-0 top-0 right-0 bottom-0 m-auto w-full h-full bg-gradient-to-b from-primary/10 to-primary/0 pointer-events-none"></div>
-            <div class="max-w-[1200px] max-2xl:max-w-[900px] max-lg:max-w-[90%] h-full min-h-[500px] flex flex-col justify-start items-start gap-4 max-lg:py-16">
+            <div class="w-[1200px] max-2xl:w-[900px] max-lg:w-[90%] h-full min-h-[500px] flex flex-col justify-start items-start gap-4 py-16 z-[99]">
                 <h2 class="text-4xl font-bold font-display" data-aos="fade-right" data-aos-duration="1000"><span class="inline-block text-base-content/60 font-normal mr-1">#</span>{{ __('atom.project') }}</h2>
                 <div class="divider" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000"></div>
                 @if(session('is_verified'))
-
+                    {!! __('complex.projects-page.text-3') !!}
+                    <div class="input flex w-full space-x-4" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
+                        <span class="icon-[tabler--search] text-base-content/80 my-auto size-6 shrink-0"></span>
+                        <input type="search" class="grow ct" placeholder="{{ __('atom.searchProject') }}" id="search-input" search-input/>
+                        <label class="sr-only" for="search-input">{{ __('atom.searchProject') }}</label>
+                    </div>
+                    @foreach($projects as $projectGroup => $projectItems)
+                        <div class="w-full h-fit p-6 bg-base-200/70 rounded-2xl">
+                            <h3 class="text-2xl font-bold font-display">{{ $projectGroup }}</h3>
+                            <div class="divider mb-8"></div>
+                            <div class="w-full grid grid-cols-1 gap-8 max-lg:gap-16">
+                                @foreach($projectItems as $title => $item)
+                                    <div class="flex flex-row max-lg:flex-col justify-start items-center gap-8" search-target-box>
+                                        <img src="{{ asset('storage/projects/' . str_replace(' ', '', strtolower($title)) . '/thumbnail.png') }}" class="w-96 h-auto rounded-2xl">
+                                        <div class="grow flex flex-col items-start max-lg:items-center justify-center gap-2">
+                                            <h4 class="text-xl font-semibold" search-target-text>{{ $title }}</h4>
+                                            <div class="divider"></div>
+                                            <div class="flex items-center gap-1 flex-wrap" search-target-text>
+                                                @forelse($item['stack'] as $stack)
+                                                    <span class="badge badge-sm badge-soft badge-secondary hover:bg-secondary/30 font-display cursor-default transition-colors" search-target-box><span search-target-text>{{ $stack }}</span></span>
+                                                @empty
+                                                    <span>N/D</span>
+                                                @endforelse
+                                            </div>
+                                            @php
+                                                if(app()->currentLocale() == 'it') {
+                                                    $desc = $item['desc']['it'];
+                                                } else {
+                                                    $desc = $item['desc']['en'];
+                                                }
+                                            @endphp
+                                            <p class="text-sm">{{ $desc }}</p>
+                                            <div class="flex items-center gap-2">
+                                                @if(isset($item['demo']))
+                                                    <a href="{{ $item['demo'] }}" target="_blank" class="btn btn-secondary btn-sm">Live</a>
+                                                @endif
+                                                @if(isset($item['repository']) && $item['repository'] !== null)
+                                                    @if(is_array($item['repository']))
+                                                        @foreach($item['repository'] as $repo)
+                                                            <a href="{{ $repo }}" target="_blank" class="btn btn-secondary btn-outline btn-sm">Repo {{ $loop->iteration }}</a>
+                                                        @endforeach
+                                                    @else
+                                                        <a href="{{ $item['repository'] }}" target="_blank" class="btn btn-secondary btn-outline btn-sm">Repo</a>
+                                                    @endif
+                                                @endif
+                                                @if(isset($item['gallery']) && $item['gallery'] === true)
+                                                    <a href="#" target="_blank" class="btn btn-accent btn-outline btn-sm">Gallery</a>
+                                                @endif
+                                                @if(isset($item['attach']) && $item['attach'] === true)
+                                                    <a href="{{ route('download.attach', [str_replace(' ', '', strtolower($title)), $item['attach_name']]) }}" class="btn btn-accent btn-outline btn-sm">Attach</a>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endforeach
                 @else
                     <form action="{{ route('verify.access') }}" method="POST" id="verify-form" class="flex flex-col justify-center items-start gap-2 w-[700px] max-lg:w-full">
                         @csrf
@@ -29,7 +86,7 @@
             </div>
         </div>
     </div>
-    @vite('resources/js/modules/verify.js')
+    @vite(['resources/js/modules/verify.js', 'resources/js/modules/search.js'])
     <script>
         window.RANDOM_PHRASE = {!! json_encode($phrase) !!};
     </script>

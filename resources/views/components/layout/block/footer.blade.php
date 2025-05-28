@@ -9,8 +9,8 @@
                 {!! __('complex.footer') !!}
             </p>
             <div class="flex felx-row justify-center items-center gap-2">
-                <a href="{{ route('download.cv') }}" class="btn btn-sm btn-secondary text-sm"><span class="icon-[tabler--file-download] size-5"></span>Scarica il CV</a>
-                <a href="{{ route('projects') }}" class="btn btn-sm btn-outline btn-secondary text-sm"><span class="icon-[tabler--folder] size-5"></span>Progetti</a>
+                <a href="{{ route('download.cv') }}" class="btn btn-sm btn-secondary text-sm"><span class="icon-[tabler--file-download] size-5"></span>{{ __('atom.cv') }}</a>
+                <a href="{{ route('projects') }}" class="btn btn-sm btn-outline btn-secondary text-sm"><span class="icon-[tabler--folder] size-5"></span>{{ __('atom.project') }}</a>
             </div>
         </div>
         <div class="flex flex-row justify-center gap-16">

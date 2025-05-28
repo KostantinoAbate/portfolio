@@ -14,6 +14,7 @@ return [
             'PHP',
             'Laravel',
             'React',
+            'Electron.js',
             'JavaScript',
             'jQuery',
             'Twig',
@@ -22,6 +23,7 @@ return [
             'Sass',
             'Less',
             'Wordpress',
+            'Android SDK',
             'Plugin WP',
             'Temi WP',
             'MySQL',
@@ -77,6 +79,7 @@ return [
             'PHP',
             'Laravel',
             'React',
+            'Electron.js',
             'JavaScript',
             'jQuery',
             'Twig',
@@ -85,6 +88,7 @@ return [
             'Sass',
             'Less',
             'Wordpress',
+            'Android SDK',
             'WP Plugin',
             'WP themes',
             'MySQL',
@@ -158,89 +162,154 @@ return [
     'projects' => [
         'Software' => [
             'CardioAI' => [
-                'thumbnail' => '',
-                'demo' => 'https://cardioai.org/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
-                    'pdf' => [],
+                'desc' => [
+                    'it' => 'CardioAI è un applicazione nata per automatizzare i processi prescritti nel PDTA sullo scompenso cardiaco della regione Campania. L\'obiettivo principale è quello di ridurre la complessità del prelevamento dati e fornire una piattaforma per la digitalizzazione.',
+                    'en' => 'CardioAI is an application developed to automate the processes outlined in the Care Pathway (PDTA) for heart failure in the Campania region. Its main goal is to reduce the complexity of data collection and provide a platform for digitalization.',
                 ],
+                'stack' => [
+                    'PHP', 'Laravel', 'JavaScript', 'jQuery', 'HTML', 'CSS', 'Sass', 'MySQL', 'Node.js', 'Tailwind CSS', 'Markdown',
+                ],
+                'demo' => 'https://cardioai.org/',
+                'repository' => null,
+                'gallery' => false,
+                'attach' => false,
+                'attach_name' => 'CardioAI - Documentazione',
             ],
             'SuiteHub' => [
-                'thumbnail' => '',
-                'demo' => 'https://suitehub.it/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+                'desc' => [
+                    'it' => 'SuiteHub è una piattaforma studiata per migliorare le performance degli operatori e degli addetti pulizie negli Hotel. Attraverso checklist dinamiche e continui cicli di report e revisione vengono individuati i processi e i pattern più efficienti, senza imporre nulla agli operatori ma adattando l\'applicazione alle abitudini stesse degli operatori.',
+                    'en' => 'SuiteHub is a platform designed to enhance the performance of hotel staff and cleaning personnel. Through dynamic checklists and continuous cycles of reporting and review, it identifies the most efficient processes and patterns—not by imposing fixed rules, but by adapting the application to the operators\' own habits.',
                 ],
+                'stack' => [
+                    'PHP', 'Laravel', 'JavaScript', 'jQuery', 'HTML', 'CSS', 'Sass', 'MySQL', 'Node.js', 'Tailwind CSS', 'Markdown',
+                ],
+                'demo' => 'https://suitehub.it/',
+                'repository' => null,
+                'gallery' => false,
             ],
             'ADMHub' => [
-                'thumbnail' => '',
-                'demo' => 'https://admhub.it/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+                'desc' => [
+                    'it' => 'ADMHub è il software gestionale interno di Ad Maiora SRL. Si tratta di un software utilizzato principalmente per il monitoraggio dei siti web, delle applicazioni e delle licenze. Ma anche uno strumento di task management e un drive per risorse condivise.',
+                    'en' => 'ADMHub is the internal management software of Ad Maiora SRL. It is primarily used for monitoring websites, applications, and licenses, but also serves as a task management tool and a shared resource drive.',
                 ],
+                'stack' => [
+                    'PHP', 'Laravel', 'JavaScript', 'jQuery', 'HTML', 'CSS', 'Sass', 'MySQL', 'Node.js', 'Tailwind CSS', 'Markdown',
+                ],
+                'demo' => 'https://admhub.it/',
+                'repository' => null,
+                'gallery' => false,
             ],
         ],
         'Siti Web' => [
-            'ChronoRealms' => [
-                'thumbnail' => '',
-                'demo' => 'https://choronorealms.it/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+            'Kindup' => [
+                'desc' => [
+                    'it' => 'Kindup è una piattaforma di "compravendita" di tempo libero. Gli utenti mettono a disposizione tempo e competenze specifiche, gratuitamente, in cambio del tempo e delle competenze specifiche di altri utenti. L\'obiettivo dell\'applicazione non è solo mettere in connessione persone disposte a dare e ricevere supporto, ma anche sedimentare buone pratiche di cittadinanza attiva e di community developement.',
+                    'en' => 'Kindup is a platform for the "exchange" of free time. Users offer their time and specific skills for free, in return for the time and skills of other users. The application\'s goal is not only to connect people willing to give and receive support, but also to foster good practices of active citizenship and community development.',
                 ],
+                'stack' => [
+                    'PHP', 'Laravel', 'JavaScript', 'jQuery', 'HTML', 'CSS', 'Sass', 'MySQL', 'Node.js', 'Tailwind CSS', 'Markdown',
+                ],
+                'demo' => 'https://kindup.it/',
+                'repository' => null,
+                'gallery' => false,
+            ],
+            'ChronoRealms' => [
+                'desc' => [
+                    'it' => 'ChronoRealms è l\'hub di un server Minecraft. La piattaforma si costituisce di una landing page e di uno store. Lo store è sviluppato utilizzando il servizio CraftingStore.',
+                    'en' => 'ChronoRealms is the hub of a Minecraft server. The platform consists of a landing page and a store, with the store developed using the CraftingStore service.',
+                ],
+                'stack' => [
+                    'PHP', 'Laravel', 'JavaScript', 'jQuery', 'HTML', 'CSS', 'Twig', 'Sass', 'Tailwind CSS',
+                ],
+                'demo' => 'https://choronorealms.it/',
+                'repository' => null,
+                'gallery' => false,
             ],
             'Ad Maiora' => [
-                'thumbnail' => '',
-                'demo' => 'https://admaiorasc.com/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+                'desc' => [
+                    'it' => 'Ad Maiora è la landing page di Ad Maiora SRL. Riassume i servizi, il portfolio e tutte le informazioni utili per mettersi in contatto con l\'azienda e usufruire dei suoi servizi.',
+                    'en' => 'Ad Maiora is the landing page of Ad Maiora SRL. It summarizes the company\'s services, portfolio, and all the essential information needed to get in touch and make use of its offerings.',
                 ],
+                'stack' => [
+                    'PHP', 'Wordpress', 'JavaScript', 'jQuery', 'HTML', 'CSS',
+                ],
+                'demo' => 'https://admaiorasc.com/',
+                'repository' => null,
+                'gallery' => false,
             ],
             'FC Advisor' => [
-                'thumbnail' => '',
-                'demo' => 'https://fcadvisor.it/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+                'desc' => [
+                    'it' => 'FC Advisor è la landing page di un gruppo di avvocati che operano in partnership con Ad Maiora SRL. Riassume i servizi, il portfolio e tutte le informazioni utili per mettersi in contatto con i clienti e usufruire dei loro servizi.',
+                    'en' => 'FC Advisor is the landing page of a group of lawyers working in partnership with Ad Maiora SRL. It outlines their services, showcases their portfolio, and provides all the essential information for clients to get in touch and access their legal support.',
                 ],
+                'stack' => [
+                    'PHP', 'Wordpress', 'JavaScript', 'jQuery', 'HTML', 'CSS',
+                ],
+                'demo' => 'https://fcadvisor.it/',
+                'repository' => null,
+                'gallery' => false,
             ],
             'Registra il Marchio' => [
-                'thumbnail' => '',
-                'demo' => 'https://www.registrailmarchio.it/',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+                'desc' => [
+                    'it' => 'Registra il Marchio è un servizio di Ad Maiora SRL legato alla categoria del Business Consulting in materia di protezione del marchio. Il verticale permette di prenotare una consulenza gratuita e consultare FAQ e listino prezzi.',
+                    'en' => 'Registra il Marchio is a service by Ad Maiora SRL, falling under the Business Consulting category and focused on trademark protection. This vertical allows users to book a free consultation and access FAQs and a pricing list.',
                 ],
-            ],
-            'Solidarity Pass' => [
-                'thumbnail' => '',
-                'demo' => 'https://www.solidaritypass.org/',
+                'stack' => [
+                    'PHP', 'Wordpress', 'JavaScript', 'jQuery', 'HTML', 'CSS',
+                ],
+                'demo' => 'https://www.registrailmarchio.it/',
+                'repository' => null,
+                'gallery' => false,
             ],
             'Formentis' => [
-                'thumbnail' => '',
+                'desc' => [
+                    'it' => 'Formentis è un leader nella formazione professionale, impegnato ad aiutare individui e professionisti a raggiungere le proprie aspirazioni di carriera. La landing page permette di consultare i servizi offerti e mettersi in contatto.',
+                    'en' => 'Formentis is a leader in professional training, dedicated to helping individuals and professionals achieve their career goals. The landing page provides an overview of the services offered and a way to get in touch.',
+                ],
+                'stack' => [
+                    'PHP', 'Wordpress', 'JavaScript', 'jQuery', 'HTML', 'CSS',
+                ],
                 'demo' => 'https://www.formentis.it/',
+                'repository' => null,
+                'gallery' => false,
+            ],
+            'Solidarity Pass' => [
+                'desc' => [
+                    'it' => 'L’obiettivo del programma è rafforzare l’opera del volontariato per favorire percorsi di fuoriuscita dalle condizioni di marginalità e disagio sociale e produrre un maggiore coinvolgimento della cittadinanza. Questa semplice landing page permette di accedere alla piattaforma e ad un software interno.',
+                    'en' => 'The goal of the program is to strengthen volunteer efforts in supporting individuals on their path out of marginalization and social hardship, while fostering greater civic engagement. This simple landing page provides access to the platform and an internal software system.',
+                ],
+                'stack' => [
+                    'HTML', 'CSS'
+                ],
+                'demo' => 'https://www.solidaritypass.org/',
+                'repository' => null,
+                'gallery' => false,
             ],
         ],
         'App Native' => [
             'NPanel' => [
-                'thumbnail' => '',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
+                'desc' => [
+                    'it' => 'NPanel è il software di gestione interno del server Minecraft NeosMC (Age of Feuds). È stato sviluppato in forma nativa con Electron.js per garantire maggiore sicurezza, attraverso un sistema di autenticazione legato al dispositivo dell\'utente staff (NAuth).',
+                    'en' => 'NPanel is the internal management software for the Minecraft server NeosMC (Age of Feuds). It was natively developed with Electron.js to ensure enhanced security through an authentication system tied to the staff user\'s device (NAuth).',
                 ],
+                'stack' => [
+                    'PHP', 'Laravel', 'Electron.js', 'JavaScript', 'jQuery', 'HTML', 'CSS', 'Sass', 'MySQL', 'Node.js', 'Tailwind CSS', 'Markdown',
+                ],
+                'demo' => null,
+                'repository' => null,
+                'gallery' => false,
             ],
             'Mira Store' => [
-                'thumbnail' => '',
-                'demo' => 'https://play.google.com/store/apps/details?id=it.mirastore.app&hl=it',
-                'gallery' => [
-                    'video' => [],
-                    'images' => [],
-                    'pdf' => [],
+                'desc' => [
+                    'it' => 'Mira Store è un porting mobile dell\'app di ecommerce di un negozio locale di abbigliamento.',
+                    'en' => 'Mira Store is a mobile version of the e-commerce app for a local clothing store.',
                 ],
+                'stack' => [
+                    'Android SDK', 'JavaScript'
+                ],
+                'demo' => 'https://play.google.com/store/apps/details?id=it.mirastore.app&hl=it',
+                'repository' => null,
+                'gallery' => false,
             ],
         ],
     ]
