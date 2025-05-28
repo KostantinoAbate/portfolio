@@ -53,3 +53,13 @@
 html {
     scroll-behavior: smooth;
 }
+
+.ka-highlight {
+    @apply text-transparent;
+    @apply bg-clip-text;
+    @apply font-bold;
+    @apply bg-gradient-to-r;
+    @apply from-secondary;
+    @apply to-accent;
+}
+

@@ -16,14 +16,34 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+            .cp {
+                cursor: url({{ asset('assets/pointer.png') }}), auto;
+            }
+            .cd {
+                cursor: url({{ asset('assets/default.png') }}), auto;
+            }
+            .ct {
+                cursor: url({{ asset('assets/text.png') }}), auto;
+            }
+
+            p, p * {
+                cursor: url({{ asset('assets/text.png') }}), auto;
+            }
+
+            *, html {
+                cursor: url({{ asset('assets/default.png') }}), auto;
+            }
+
+            a, a *, button, button * {
+                cursor: url({{ asset('assets/pointer.png') }}), auto;
+            }
+        </style>
     @else
         {{-- Fallback --}}
     @endif
 </head>
 <body class="relative w-full min-h-screen">
-
-    <x-layout.block.loader/>
-    <x-layout.block.alert/>
 
     <div class="w-full h-screen">
         <x-layout.block.header/>
