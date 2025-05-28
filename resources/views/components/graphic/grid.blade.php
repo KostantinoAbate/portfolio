@@ -1,0 +1,1 @@
+<div class="w-full h-full absolute z-[-1] opacity-5 dark:opacity-10" style="background-size: 40px 40px; background-image: linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px);" ></div>

@@ -5,7 +5,7 @@
             $pageId = Str::afterLast($view, '.');
         @endphp
 
-        <div class="w-full h-full max-h-screen" id="{{ $pageId }}">
+        <div class="w-full h-screen max-h-screen" id="{{ $pageId }}">
             @include($view)
         </div>
     @endforeach

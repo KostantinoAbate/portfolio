@@ -5,17 +5,31 @@
 @plugin "flyonui/theme" {
   name: "light";
   default: false;
-  --color-primary: indigo;
-  --color-secondary: fuchsia;
-  --color-accent: lime;
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: oklch(95% 0 0);
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: teal;
+  --color-primary-content: oklch(21% 0.006 285.885);
+  --color-secondary: oklch(0.8709 0.14 182.503);
+  --color-secondary-content: oklch(21% 0.006 285.885);
+  --color-accent: oklch(0.7789 0.14 165.04);
+  --color-accent-content: oklch(21% 0.006 285.885);
 }
 
 @plugin "flyonui/theme" {
   name: "dark";
   default: true;
-  --color-primary: indigo;
-  --color-secondary: fuchsia;
-  --color-accent: lime;
+  --color-base-100: oklch(25.33% 0.016 252.42);
+  --color-base-200: oklch(23.26% 0.014 253.1);
+  --color-base-300: oklch(21.15% 0.012 254.09);
+  --color-base-content: oklch(97.807% 0.029 256.847);
+  --color-primary: teal;
+  --color-primary-content: oklch(21% 0.006 285.885);
+  --color-secondary: oklch(0.8709 0.14 182.503);
+  --color-secondary-content: oklch(21% 0.006 285.885);
+  --color-accent: oklch(0.7789 0.14 165.04);
+  --color-accent-content: oklch(21% 0.006 285.885);
 }
 @import "flyonui/variants.css";
 
@@ -34,4 +48,8 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-mono: 'Fira Code', ui-monospace, system-ui, monospace, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+html {
+    scroll-behavior: smooth;
 }
