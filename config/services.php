@@ -38,5 +38,6 @@ return [
         'sitekey' => env('RECAPTCHA_SITE_KEY'),
         'secret' => env('RECAPTCHA_SECRET_KEY'),
     ],
+    'google-site-verification-token' => env('GOOGLE_SITE_VERIFICATION_TOKEN', null),
 
 ];

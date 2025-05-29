@@ -9,12 +9,14 @@ use Illuminate\View\Component;
 class App extends Component
 {
     public $locale;
+    public $title;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($title)
     {
         $this->locale = app()->currentLocale();
+        $this->title = $title;
     }
 
     /**

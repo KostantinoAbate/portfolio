@@ -1,4 +1,30 @@
-<x-layout.app>
+@php
+    $title = __('atom.project');
+    if(app()->currentLocale() == 'it') {
+        $metaData = [
+            'keywords' => 'progetti, lavori, sviluppatore web, Laravel, React, portfolio, applicazioni, codice',
+            'description' => 'Lista completa dei progetti realizzati da Kostantino Abate: dalle web app ai gestionali personalizzati.',
+            'abstract' => 'Catalogo dei progetti sviluppati, con descrizioni, stack utilizzati e funzionalità chiave.',
+            'topic' => 'Sviluppo web',
+            'summary' => 'Scopri i progetti che ho realizzato: soluzioni su misura per esigenze reali.',
+            'title' => 'Progetti – Kostantino Abate',
+            'subtitle' => 'Dal codice alla soluzione: ogni progetto racconta una sfida.',
+            'image' => '',
+        ];
+    } else {
+        $metaData = [
+            'keywords' => 'projects, work, developer portfolio, Laravel, React, web apps, applications, full-stack',
+            'description' => 'A full list of projects by Kostantino Abate: from web apps to custom management tools.',
+            'abstract' => 'Project catalog with detailed descriptions, technologies used, and key features.',
+            'topic' => 'Web Development',
+            'summary' => 'Discover custom-built projects tailored to real-world needs.',
+            'title' => 'Projects – Kostantino Abate',
+            'subtitle' => 'From code to solution: every project tells a story.',
+            'image' => '',
+        ];
+    }
+@endphp
+<x-layout.app :metaData="$metaData" :title="$title">
     @php
         if(app()->currentLocale() == 'it') {
             $phrase = Arr::random(config('init.random_phrases.it'));
@@ -15,7 +41,7 @@
             <div class="w-[1200px] max-2xl:w-[900px] max-lg:w-[90%] h-full min-h-[500px] flex flex-col justify-start items-start gap-4 py-16 z-[99]">
                 <h2 class="text-4xl font-bold font-display" data-aos="fade-right" data-aos-duration="1000"><span class="inline-block text-base-content/60 font-normal mr-1">#</span>{{ __('atom.project') }}</h2>
                 <div class="divider" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000"></div>
-                @if(session('is_verified'))
+                @if(!session('is_verified'))
                     {!! __('complex.projects-page.text-3') !!}
                     <div class="input flex w-full space-x-4" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
                         <span class="icon-[tabler--search] text-base-content/80 my-auto size-6 shrink-0"></span>
@@ -27,11 +53,17 @@
                             <h3 class="text-2xl font-bold font-display">{{ $projectGroup }}</h3>
                             <div class="divider mb-8"></div>
                             <div class="w-full grid grid-cols-1 gap-8 max-lg:gap-16">
-                                @foreach($projectItems as $title => $item)
+                                @foreach($projectItems as $id => $item)
                                     <div class="flex flex-row max-lg:flex-col justify-start items-center gap-8" search-target-box>
-                                        <img src="{{ asset('storage/projects/' . str_replace(' ', '', strtolower($title)) . '/thumbnail.png') }}" class="w-96 h-auto rounded-2xl">
+                                        @if(isset($item['gallery']) && $item['gallery'] === true)
+                                            <a href="{{ route('gallery', [$projectGroup, $id]) }}" class="w-96 min-w-96 h-auto rounded-2xl overflow-hidden">
+                                                <img src="{{ asset('storage/projects/' . $id . '/thumbnail.png') }}" class="w-full h-auto">
+                                            </a>
+                                        @else
+                                            <img src="{{ asset('storage/projects/' . $id . '/thumbnail.png') }}" class="w-96 h-auto rounded-2xl">
+                                        @endif
                                         <div class="grow flex flex-col items-start max-lg:items-center justify-center gap-2">
-                                            <h4 class="text-xl font-semibold" search-target-text>{{ $title }}</h4>
+                                            <h4 class="text-xl font-semibold" search-target-text>{{ $item['title'] }}</h4>
                                             <div class="divider"></div>
                                             <div class="flex items-center gap-1 flex-wrap" search-target-text>
                                                 @forelse($item['stack'] as $stack)
@@ -62,10 +94,10 @@
                                                     @endif
                                                 @endif
                                                 @if(isset($item['gallery']) && $item['gallery'] === true)
-                                                    <a href="#" target="_blank" class="btn btn-accent btn-outline btn-sm">Gallery</a>
+                                                    <a href="{{ route('gallery', [$projectGroup, $id]) }}" target="_blank" class="btn btn-accent btn-outline btn-sm">Gallery</a>
                                                 @endif
                                                 @if(isset($item['attach']) && $item['attach'] === true)
-                                                    <a href="{{ route('download.attach', [str_replace(' ', '', strtolower($title)), $item['attach_name']]) }}" class="btn btn-accent btn-outline btn-sm">Attach</a>
+                                                    <a href="{{ route('download.attach', [$id, $item['attach_name']]) }}" class="btn btn-accent btn-outline btn-sm">Attach</a>
                                                 @endif
                                             </div>
                                         </div>

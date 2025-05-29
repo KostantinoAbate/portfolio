@@ -1,4 +1,30 @@
-<x-layout.app>
+@php
+    $title = __('atom.prospect');
+    if(app()->currentLocale() == 'it') {
+        $metaData = [
+            'keywords' => 'competenze, skill, stack tecnologico, linguaggi, framework, full-stack, PHP, JavaScript',
+            'description' => 'Esplora tutte le skill tecniche di Kostantino Abate: linguaggi, framework, metodologie e strumenti.',
+            'abstract' => 'Panoramica completa delle tecnologie utilizzate e delle competenze acquisite nel tempo.',
+            'topic' => 'Competenze tecniche',
+            'summary' => 'Tutto il mio stack tecnologico: backend, frontend, dev tools e workflow.',
+            'title' => 'Skill & Stack – Kostantino Abate',
+            'subtitle' => 'Competenze solide, tecnologie moderne, risultati concreti.',
+            'image' => '',
+        ];
+    } else {
+        $metaData = [
+            'keywords' => 'skills, stack, technologies, programming languages, frameworks, full-stack, PHP, JavaScript',
+            'description' => 'Explore all technical skills of Kostantino Abate: languages, frameworks, tools, and methodologies.',
+            'abstract' => 'Complete overview of the technologies used and skills developed over time.',
+            'topic' => 'Technical Skills',
+            'summary' => 'My full tech stack: backend, frontend, tools, and workflow.',
+            'title' => 'Skills & Stack – Kostantino Abate',
+            'subtitle' => 'Solid skills, modern technologies, real results.',
+            'image' => '',
+        ];
+    }
+@endphp
+<x-layout.app :metaData="$metaData" :title="$title">
     <div class="w-full min-h-screen max-lg:h-fit max-lg:max-h-fit" id="prospect">
         <div class="w-full min-h-screen flex flex-col justify-center items-center gap-4 relative overflow-hidden">
             <x-graphic.grid/>

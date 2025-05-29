@@ -30,4 +30,12 @@ class HomeController extends Controller
         }
         return redirect()->back();
     }
+
+    public function changeArbitrary($lang)
+    {
+        if (in_array($lang, ['en', 'it'])) {
+            Session::put('session_locale', $lang);
+        }
+        return redirect()->route('home');
+    }
 }

@@ -1,10 +1,18 @@
+@props(['metaData', 'title'])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', $locale) }}" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kostantino Abate</title>
+    <x-layout.block.meta :metaData="$metaData" :title="$title"/>
+    <title>
+        @if(Route::is('home'))
+            {{ config('app.name') }}
+        @else
+            {{ config('app.name') }} | {{ $title }}
+        @endif
+    </title>
 
     {{-- Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +30,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        @if(Route::is('gallery'))
+            <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet"/>
+            @vite('resources/sass/vjs.scss')
+        @endif
         <style>
             .cp {
                 cursor: url({{ asset('assets/pointer.png') }}), auto;
@@ -66,5 +78,9 @@
     <script>
         AOS.init({once: true,});
     </script>
+    @if(Route::is('gallery'))
+        <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
+        @vite('resources/js/modules/gallery.js')
+    @endif
 </body>
 </html>
