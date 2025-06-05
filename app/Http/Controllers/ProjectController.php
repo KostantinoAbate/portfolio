@@ -34,12 +34,14 @@ class ProjectController extends Controller
         $hasVideo = !empty($videoFiles);
         $hasImg   = !empty($imgFiles);
 
-        // Prendi il primo video (se ce n’è) e creane l’URL pubblico
-        $video = null;
-        if ($hasVideo) {
-            // Se vuoi mostrare tutti i video, usa invece $videoFiles direttamente
-            $firstVideoPath = $videoFiles[0];
-            $video = asset('storage/' . $firstVideoPath);
+        // mappa le estensioni ai path pubblici
+        $videoFormats = [];
+        foreach ($videoFiles as $path) {
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+            // puoi filtrare solo mp4 e webm se vuoi:
+            if (in_array($ext, ['mp4', 'webm'])) {
+                $videoFormats[$ext] = asset("storage/{$path}");
+            }
         }
 
         // Mappa tutti i file immagine a URL pubblici
@@ -50,6 +52,6 @@ class ProjectController extends Controller
                 $imgs[] = asset('storage/' . $path);
             }
         }
-        return view('pages.gallery', compact('project', 'hasVideo', 'hasImg', 'video', 'imgs'));
+        return view('pages.gallery', compact('project', 'hasVideo', 'hasImg', 'videoFormats', 'imgs'));
     }
 }

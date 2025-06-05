@@ -40,7 +40,6 @@ $pm = [
     'og_email' => config('meta.email') ?? null,
     'og_phone_number' => config('meta.phone') ?? null,
 
-    'google-site-verification' => config('services.google-site-verification-token') ?? null,
     'news_keywords' => $metaData['keywords'] ?? null,
 
     'apple-mobile-web-app-title' => $metaData['title'] ?? $processedTitle,
@@ -83,3 +82,5 @@ $pm = [
 {!! !is_null($pm['og_application-name']) ? '<meta name="application-name" content="' . $pm['og_application-name'] . '">' : '' !!}
 {!! !is_null($pm['og_email']) ? '<meta name="og:email" content="' . $pm['og_email'] . '">' : '' !!}
 {!! !is_null($pm['og_phone_number']) ? '<meta name="og:phone_number" content="' . $pm['og_phone_number'] . '">' : '' !!}
+
+{!! !is_null($pm['news_keywords']) ? '<meta name="news_keywords" content="' . $pm['news_keywords'] . '">' : '' !!}

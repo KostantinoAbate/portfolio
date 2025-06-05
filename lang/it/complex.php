@@ -92,5 +92,6 @@ return [
         'text' => 'Potrei fare un <span class="ka-highlight">wall of text</span> di competenze, ambiti, tecnologie con cui ho lavorato. Ma essendo uno sviluppatore non potevo
                     non cercare una soluzione anche per questo! <span class="ka-highlight">Cerca tu quello che ti serve</span>, ti dirò se posso aiutarti.',
     ],
-    'footer' => 'Mi occupo di Software e Web development, creando soluzioni<br> moderne e scalabili per aziende e progetti indipendenti.'
+    'footer' => 'Mi occupo di Software e Web development, creando soluzioni<br> moderne e scalabili per aziende e progetti indipendenti.',
+    'video' => '<p class="vjs-no-js">Per visualizzare questo video, abilita JavaScript e considera l\'aggiornamento a un browser web che <a href="https://videojs.com/html5-video-support/" target="_blank">supporti il video HTML5</a></p>'
 ];

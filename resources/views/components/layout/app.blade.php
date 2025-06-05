@@ -76,7 +76,7 @@
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({once: true,});
+        AOS.init({once: true, disable: 'mobile'});
     </script>
     @if(Route::is('gallery'))
         <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>

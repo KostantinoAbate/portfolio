@@ -88,5 +88,6 @@ return [
         'text' => 'I could throw a <span class="ka-highlight">wall of text</span> listing all my skills, fields, and technologies I’ve worked with. But as a developer, I couldn’t resist finding a smarter solution!
                     <span class="ka-highlight">Search for what you need</span>, and I’ll tell you if I can help.'
     ],
-    'footer' => 'I work in Software and Web development, creating<br> modern and scalable solutions for businesses and independent projects.'
+    'footer' => 'I work in Software and Web development, creating<br> modern and scalable solutions for businesses and independent projects.',
+    'video' => '<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>'
 ];

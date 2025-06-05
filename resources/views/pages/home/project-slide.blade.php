@@ -13,7 +13,7 @@
         <div class="divider" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">{{ __('atom.more') }}</div>
         <div class="w-full flex flex-row justify-center items-center gap-2">
             <a href="{{ route('projects') }}" class="btn btn-secondary text-sm" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"><span class="icon-[tabler--folder] size-5"></span>{{ __('atom.project') }}</a>
-            <a href="#references" class="btn btn-secondary btn-outline text-sm" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000"><span class="icon-[tabler--chevron-down] size-5"></span>{{ __('atom.continue') }}</a>
+            <a href="#contact" class="btn btn-secondary btn-outline text-sm" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000"><span class="icon-[tabler--chevron-down] size-5"></span>{{ __('atom.continue') }}</a>
         </div>
     </div>
 </div>

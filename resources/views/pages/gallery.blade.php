@@ -50,14 +50,15 @@
                                 data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
                                 vjs-fluid
                             >
-                                <source src="{{ $video }}" type="video/webm" />
-                                <p class="vjs-no-js">
-                                To view this video please enable JavaScript, and consider upgrading to a
-                                web browser that
-                                <a href="https://videojs.com/html5-video-support/" target="_blank"
-                                    >supports HTML5 video</a
-                                >
-                                </p>
+                                @if(isset($videoFormats['webm']))
+                                    <source src="{{ $videoFormats['webm'] }}" type="video/webm">
+                                @endif
+
+                                @if(isset($videoFormats['mp4']))
+                                    <source src="{{ $videoFormats['mp4'] }}" type="video/mp4">
+                                @endif
+
+                                {!! __('complex.video') !!}
                             </video>
                         </div>
                     @endif
@@ -67,7 +68,7 @@
                         @endif
                         <div class="pswp-gallery grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-4" id="my-gallery">
                             @foreach($imgs as $img)
-                                <a href="{{ $img }}" data-pswp-width="1917" data-pswp-height="907" data-cropped="true" target="_blank">
+                                <a href="{{ $img }}" data-pswp-width="1915" data-pswp-height="900" data-cropped="true" target="_blank">
                                     <img src="{{ $img }}" class="rounded-2xl hover:scale-110 transition-all" alt="" />
                                 </a>
                             @endforeach
